@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "81719538844",
+    "project_id": "firestoredatabase-f3c86",
+    "storage_bucket": "firestoredatabase-f3c86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81719538844:android:5731eb3bcbd396c7d9a959",
+        "android_client_info": {
+          "package_name": "com.programmingz.firestoredatabase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDjPADoaJWSZdZd7L1sLhr5pyZpA2g36k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
