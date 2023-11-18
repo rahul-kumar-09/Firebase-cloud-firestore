@@ -1,5 +1,6 @@
 package com.programmingz.firestoredatabase
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var etEmail: EditText
     private lateinit var etPassword: EditText
     private lateinit var btnSave: Button
+    private lateinit var btnShow: Button
     private lateinit var auth: FirebaseAuth
 
 
@@ -29,6 +31,13 @@ class MainActivity : AppCompatActivity() {
         etEmail = findViewById(R.id.tvEmail)
         etPassword = findViewById(R.id.tvPassword)
         btnSave = findViewById(R.id.btnSave)
+        btnShow = findViewById(R.id.btnShow)
+
+        btnShow.setOnClickListener {
+            startActivity(Intent(this, FetcbDataActivity::class.java))
+        }
+
+
 
         btnSave.setOnClickListener {
             val sName = etName.text.toString().trim()
