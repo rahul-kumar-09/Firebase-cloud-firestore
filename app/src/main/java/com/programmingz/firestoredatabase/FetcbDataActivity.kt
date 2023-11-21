@@ -31,7 +31,7 @@ class FetcbDataActivity : AppCompatActivity() {
             Toast.makeText(this, "some error", Toast.LENGTH_SHORT).show()
 
         } else {
-            // Executes 5 times: i takes values from 1 to 5
+
             val userId = user?.uid
         }
 

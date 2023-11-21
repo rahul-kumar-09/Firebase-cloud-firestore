@@ -29,6 +29,7 @@
             android:id="@+id/tvName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:hint="Name"
             android:inputType="text"
             android:layout_marginBottom="10dp"
@@ -38,6 +39,7 @@
             android:id="@+id/tvAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:hint="Address"
             android:layout_marginBottom="10dp"
             android:inputType="text"
@@ -47,6 +49,7 @@
             android:id="@+id/tvEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:inputType="textEmailAddress"
             android:layout_marginBottom="10dp"
             android:hint="Email"
@@ -56,6 +59,7 @@
             android:id="@+id/tvPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:textSize="22sp"
             android:hint="Password"
             android:layout_marginBottom="10dp"
@@ -76,6 +80,15 @@
             android:text="Show Data"
             android:layout_marginBottom="10dp"
             android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnUpdated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp" />
+
 
     </LinearLayout>
 

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".FetcbDataActivity">
 
     <TextView
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:text="Welcome"
         android:gravity="center"
+        android:textColor="@color/black"
         android:textSize="22sp" />
 
     <TextView
@@ -19,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Name"
+        android:textColor="@color/black"
         android:layout_marginHorizontal="15dp"
         android:textSize="22sp" />
 
@@ -27,6 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Email"
+        android:textColor="@color/black"
         android:layout_marginHorizontal="15dp"
         android:textSize="22sp" />
 
@@ -35,6 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Address"
+        android:textColor="@color/black"
         android:layout_marginHorizontal="15dp"
         android:textSize="22sp" />
 

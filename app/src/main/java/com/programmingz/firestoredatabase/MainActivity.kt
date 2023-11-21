@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var etPassword: EditText
     private lateinit var btnSave: Button
     private lateinit var btnShow: Button
+    private lateinit var btnUpdated: Button
     private lateinit var auth: FirebaseAuth
 
 
@@ -32,6 +33,12 @@ class MainActivity : AppCompatActivity() {
         etPassword = findViewById(R.id.tvPassword)
         btnSave = findViewById(R.id.btnSave)
         btnShow = findViewById(R.id.btnShow)
+        btnUpdated = findViewById(R.id.btnUpdated)
+
+
+        btnUpdated.setOnClickListener {
+            startActivity(Intent(this, UpdateActivity::class.java))
+        }
 
         btnShow.setOnClickListener {
             startActivity(Intent(this, FetcbDataActivity::class.java))
