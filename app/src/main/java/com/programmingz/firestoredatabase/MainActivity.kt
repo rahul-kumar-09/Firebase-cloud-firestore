@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnShow: Button
     private lateinit var btnUpdated: Button
     private lateinit var auth: FirebaseAuth
+    private lateinit var btnDeleted: Button
 
 
     private var db = Firebase.firestore
@@ -34,7 +35,12 @@ class MainActivity : AppCompatActivity() {
         btnSave = findViewById(R.id.btnSave)
         btnShow = findViewById(R.id.btnShow)
         btnUpdated = findViewById(R.id.btnUpdated)
+        btnDeleted = findViewById(R.id.btnDeleted)
 
+
+        btnDeleted.setOnClickListener {
+            startActivity(Intent(this, DeleteActivity::class.java))
+        }
 
         btnUpdated.setOnClickListener {
             startActivity(Intent(this, UpdateActivity::class.java))

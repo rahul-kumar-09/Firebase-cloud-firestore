@@ -1,47 +1,39 @@
 package com.programmingz.firestoredatabase
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class UpdateActivity : AppCompatActivity() {
+class DeleteActivity : AppCompatActivity() {
     private lateinit var etName: EditText
     private lateinit var etEmail: EditText
     private lateinit var etAddress: EditText
     private lateinit var etPassword: EditText
-    private lateinit var btnUpdate: Button
+    private lateinit var btnDelete: Button
 
     private var db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_update)
+        setContentView(R.layout.activity_delete)
 
         etName = findViewById(R.id.etName)
         etEmail = findViewById(R.id.etEmail)
         etAddress = findViewById(R.id.etAddress)
         etPassword = findViewById(R.id.etPassword)
-        btnUpdate = findViewById(R.id.btnUpdate)
+        btnDelete = findViewById(R.id.btnDelete)
 
         setData()
 
-        btnUpdate.setOnClickListener {
-            val sName = etName.text.toString()
-            val sAddress = etAddress.text.toString()
-            val sEmail = etEmail.text.toString()
-            val sPassword = etPassword.text.toString()
-
-            val updateMap = mapOf(
-                "name" to sName,
-                "email" to sEmail,
-                "password" to sPassword,
-                "address" to sAddress
+        btnDelete.setOnClickListener {
+            val mapDelete = mapOf(
+                "password" to FieldValue.delete()
             )
             val user = FirebaseAuth.getInstance().currentUser
             if (user!=null){
@@ -49,10 +41,14 @@ class UpdateActivity : AppCompatActivity() {
             } else {
                 val userId = user?.uid
             }
-            db.collection("User").document(user.toString()).update(updateMap)
 
-            Toast.makeText(this, "Successfully Updated", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, MainActivity::class.java))
+            db.collection("User").document(user.toString()).update(mapDelete)
+                .addOnSuccessListener {
+                    Toast.makeText(this,  "Successfully deleted", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener {
+                    Toast.makeText(this, "Deletion failed! ", Toast.LENGTH_SHORT).show()
+                }
         }
 
     }

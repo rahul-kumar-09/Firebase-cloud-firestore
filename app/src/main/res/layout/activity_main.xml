@@ -88,7 +88,13 @@
             android:text="Update"
             android:layout_marginBottom="10dp"
             android:textSize="18sp" />
-
+        <Button
+            android:id="@+id/btnDeleted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
